@@ -102,7 +102,7 @@ class __$$_InventoryCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       items: null == items
-          ? _value._items
+          ? _value.items
           : items // ignore: cast_nullable_to_non_nullable
               as List<Item>,
     ));
@@ -113,19 +113,14 @@ class __$$_InventoryCopyWithImpl<$Res>
 
 class _$_Inventory implements _Inventory {
   const _$_Inventory(
-      {required this.id, required this.name, required final List<Item> items})
-      : _items = items;
+      {required this.id, required this.name, required this.items});
 
   @override
   final String id;
   @override
   final String name;
-  final List<Item> _items;
   @override
-  List<Item> get items {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_items);
-  }
+  final List<Item> items;
 
   @override
   String toString() {
@@ -139,12 +134,12 @@ class _$_Inventory implements _Inventory {
             other is _$_Inventory &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other._items, _items));
+            const DeepCollectionEquality().equals(other.items, items));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, name, const DeepCollectionEquality().hash(_items));
+      runtimeType, id, name, const DeepCollectionEquality().hash(items));
 
   @JsonKey(ignore: true)
   @override

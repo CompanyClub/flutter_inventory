@@ -1,0 +1,12 @@
+MaterialApp
+ |_ Theme
+    |_ HomePage (inventories)
+        |_ Scaffold
+           |_ Column
+              |_ Text
+              |_ List
+                 |_ InventoryCard
+                                        => ItemsPage (inventoryName)
+                                            |_ Scaffold
+                                                |_ ...
+                 |_ InventoryCard
